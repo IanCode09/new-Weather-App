@@ -18,6 +18,7 @@ const search = document.querySelector('input')
 const weather = document.querySelector('#weather')
 const address = document.querySelector('#location')
 const temperature = document.querySelector('#temperature')
+const time = document.querySelector('#time')
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -27,6 +28,7 @@ weatherForm.addEventListener('submit', (e) => {
     weather.textContent = 'Loading...'
     address.textContent = ''
     temperature.textContent = ''
+    time.textContent = ''
 
     fetch(url + location).then((response) => {
         response.json().then((data) => {
@@ -35,7 +37,9 @@ weatherForm.addEventListener('submit', (e) => {
                 weather.textContent = data.error
             } else {
                 temperature.textContent = data.temperature
-                weather.textContent = data.location
+                address.textContent = data.location
+                weather.textContent = data.weather_description
+                time.textContent = data.time
                 console.log(data);
             }
         })

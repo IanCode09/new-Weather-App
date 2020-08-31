@@ -27,7 +27,7 @@ app.use(express.static(publicDirectoryPath))
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather App',
-        name: 'IanLombu'
+        name: 'ianCode'
     })
 })
 
@@ -43,7 +43,7 @@ app.get('/weather', (req, res) => {
            return res.send({ error })
        }
 
-       forecast(latitude, longitude, (error, {weather_description, temperature} = {}  ) => {
+       forecast(latitude, longitude, (error, {weather_description, temperature, time} = {}  ) => {
            if(error) {
                return res.send({ error });
            }
@@ -53,7 +53,8 @@ app.get('/weather', (req, res) => {
                location: location,
                address: req.query.address,
                weather_description: weather_description,
-               temperature: temperature
+               temperature: temperature,
+               time:time
            })
        })
    })

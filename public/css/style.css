@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: white;   
@@ -11,7 +11,7 @@ body {
 
 
 h1 {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 p {
@@ -20,7 +20,9 @@ p {
 
 .content {
     margin: 20px auto;
-    background-image: linear-gradient(to bottom, #2c4c7c, #0e608c, #007397, #00859c, #0d979d);
+    /* background-image: linear-gradient(to right top, #8c2560, #893b78, #824e8d, #795f9d, #706faa, #5f76ae, #4e7dae, #4182ac, #2180a0, #007d91, #007980, #08746d); */
+    background-image: url('/images/bg.jpg');
+    background-size: 250%;
     height: 620px;
     width: 450px;
 }
@@ -63,18 +65,27 @@ button:hover {
 }
 
 .list-weather {
-    margin-top: 30px;
+    margin-top: 50px;
+    text-align: center;
 }
 
 .list-weather .temperature {
-    font-size: 70px;
+    font-size: 90px;
+}
+
+.list-weather #ianCode {
+    margin-top: 10px;
+    font-size: 40px;
+    border: 2px solid rgb(235, 224, 224);
 }
 
 .footer {
     position: absolute;
-    margin-top: 574px;
-    background-color: rgb(3, 50, 94);
-    padding: 10px;
-    width: 430px;
+    margin-top: 500px;
+    font-size: 30px;
+    border: 2px solid rgb(235, 224, 224);
+    padding: 5px;
+    width: 300px;
     text-align: center;
+    margin-left: 65px;
 }
