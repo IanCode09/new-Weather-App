@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+
+    <div class="content">
+        <div class="heading">
+            {{>header}}
+        </div>
+
+
+        <div class="main-content">
+            <div class="form-input">
+                <form>
+                    <input placeholder="Your Location...">
+                    <button>Search</button>
+                </form>
+            </div>
+
+            <div class="list-weather">
+                <p>Monday, 31 August 2020 </p>
+                <p class="temperature" id="temperature"></p>
+                <p></p>
+                <p id='location'></p>
+                <p id='weather'></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            {{>footer}}
+        </div>
+
+    </div> 
+
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
